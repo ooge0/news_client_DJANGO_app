@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style_table.css' %}">
+    </head>
+    <body>
+     <a href="{% url 'get_sources' %}">Sources</a>
+     <table class="styled-table">
+    <tr>
+    <th>source.id</th>
+         <th>source.name</th>
+    <th>source.context</th>
+    </tr>
+    {% for source in sources %}
+    <tr>
+    <td>{{source.id}}</td>
+    <td><a href="{% url 'get_source' pk=source.id %}">{{source.url}}</a> </td>
+    <td>{{source.name}}</td>
+    </tr>
+         {% endfor %}
+     </table>
+    </body>
+</html>

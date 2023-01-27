@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style_source.css' %}">
+
+<html>
+    <body>
+        <h2>Source "{{ source.name }}"</h2>
+        <a href="{% url 'get_sources' %}">Sources</a>
+        <a href="{% url 'get_sources_table' %}">Sources table </a>
+        <ul>
+            <li>{{source.id}} - {{ source.url }} – {{ source.name }}</li>
+        </ul>
+    </body>
+</html>

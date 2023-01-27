@@ -1,0 +1,33 @@
+# news
+
+DJANGO web app for managing parsed articles from different sources.
+
+##Django installation
+
+Windows
+
+`pip install django`
+
+Mac
+
+`python -m pip install Django`
+
+## Project launch process
+1. Install Django
+2. Migrate DB
+
+<br> &nbsp;&nbsp; *Migrations* are Django’s way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema. They’re designed to be mostly automatic, but you’ll need to know when to make migrations, when to run them, and the common problems you might run into.
+<br> &nbsp;&nbsp; *The Commands*
+There are several commands which you will use to interact with migrations and Django’s handling of database schema:
+- _**migrate**_, which is responsible for applying and unapplying migrations.
+- **_makemigrations_**, which is responsible for creating new migrations based on the changes you have made to your models.
+sqlmigrate, which displays the SQL statements for a migration.
+- **_showmigrations_**, which lists a project’s migrations and their status.
+
+   1. migrate DB by command:
+      - windows OS: `python manage.py migrate`
+      - MacOS: 
+
+#TIPS
+
+- [FIX for "SECURITY WARNING: keep the secret key ](https://dev.to/vladyslavnua/how-to-protect-your-django-secret-and-oauth-keys-53fl)

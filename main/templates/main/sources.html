@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style_sources.css' %}">
+<html>
+    <body>
+    <h2> Sources</h2>
+        <ul>
+            {% for source in sources %}
+                <li>{{source.id}} - <a href="{% url 'get_source' pk=source.id %}">{{source.url}}</a> – {{ source.name }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
