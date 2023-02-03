@@ -3,15 +3,9 @@ from django.http import HttpResponse, request
 from main import models
 
 
-def home(request):
-    # source = models.Source(name='name1', context='context1')
-    # source.save()
-
-    source = models.Source.objects.get(name='name1')
-    print(source)
-    
+def get_home(request):
     context = {
-        'mystring': 'haha'
+        'mystring': 'This is my home page'
     }
     return render(request, 'main/home.html', context)
 
@@ -23,10 +17,10 @@ def create_source(request):
     source.save()
     return HttpResponse('haha')
 
-def get_sources(request):
+def get_sources_list(request):
     context = {}
     context['sources'] = list(models.Source.objects.all())
-    return render(request, 'main/sources.html', context)
+    return render(request, 'main/sources_list.html', context)
 
 def get_sources_table(request):
     context = {}

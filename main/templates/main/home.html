@@ -1,1 +1,9 @@
-{{ mystring }}
+{% load static %}
+<html>
+    <body>
+    <h1> {{ mystring }} </h1>
+<link rel="stylesheet" href="{% static 'style_source.css' %}">
+ <a href="{% url 'get_sources_list' %}">Sources list</a>
+        </ul>
+    </body>
+</html>

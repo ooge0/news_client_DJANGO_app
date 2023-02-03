@@ -3,8 +3,8 @@
 
 <html>
     <body>
-        <h2>Source "{{ source.name }}"</h2>
-        <a href="{% url 'get_sources' %}">Sources</a>
+        <h2>Source "{{ source.name }}" page</h2>
+        <a href="{% url 'get_sources_list' %}">Sources</a>
         <a href="{% url 'get_sources_table' %}">Sources table </a>
         <ul>
             <li>{{source.id}} - {{ source.url }} – {{ source.name }}</li>

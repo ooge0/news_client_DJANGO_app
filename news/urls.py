@@ -19,8 +19,8 @@ from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('sources/', views.get_sources, name='get_sources'),
+    path('', views.get_home, name='get_home'),
+    path('sources_list/', views.get_sources_list, name='get_sources_list'),
     path('sources_table/', views.get_sources_table, name='get_sources_table'),
     path('source/create/', views.create_source),
     path('source/<int:pk>', views.get_source, name='get_source')
