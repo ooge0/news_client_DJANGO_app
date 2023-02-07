@@ -1,18 +1,16 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style_sources.css' %}">
 <html>
-    <body>
-    <h1> Sources list page</h1>
-    <h2>     <a href="{% url 'get_home' %}">Home</a>     </h2>
-<h2>
-    <a href="{% url 'get_sources_table' %}">Sources table</a>
-</h2>
-
-    <h2> Sources</h2>
-        <ul>
-            {% for source in sources %}
-                <li>{{source.id}} - <a href="{% url 'get_source' pk=source.id %}">{{source.url}}</a> – {{ source.name }}</li>
-            {% endfor %}
-        </ul>
-    </body>
+<title>Sources list page</title>
+<body>
+<h1> Sources list page</h1>
+<h2><a href="{% url 'get_home' %}">Home</a></h2>
+<h2><a href="{% url 'get_sources_table' %}">Sources table</a></h2>
+<h2> Sources</h2>
+<ul>
+    {% for source in sources %}
+    <li>{{source.id}} - <a href="{% url 'get_source' pk=source.id %}">{{source.url}}</a> – {{ source.name }}</li>
+    {% endfor %}
+</ul>
+</body>
 </html>

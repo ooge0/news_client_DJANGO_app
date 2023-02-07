@@ -1,13 +1,18 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style_source.css' %}">
-
 <html>
-    <body>
-        <h2>Source "{{ source.name }}" page</h2>
-        <a href="{% url 'get_sources_list' %}">Sources</a>
-        <a href="{% url 'get_sources_table' %}">Sources table </a>
-        <ul>
-            <li>{{source.id}} - {{ source.url }} – {{ source.name }}</li>
-        </ul>
-    </body>
+<title>Source "{{ source.name }}" page</title>
+<body>
+<h2>Source "{{ source.name }}" page</h2>
+<a href="{% url 'get_sources_list' %}">Sources</a>
+<a href="{% url 'get_sources_table' %}">Sources table </a>
+<ul>
+    <li>{{source.id}} - {{ source.url }} – {{ source.name }}</li>
+</ul>
+<br>
+<h3><i> Content of selected '{{source.name}}' source</i></h3>
+<ul>
+    <li> {{source.id}} - {{ data.header }} – {{ data.text }}</li>
+</ul>
+</body>
 </html>
