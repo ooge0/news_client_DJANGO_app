@@ -1,17 +1,18 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'style_table.css' %}">
 <html>
-<title>Sources table page</title>
+<title>Sources table</title>
 <head>
-    <link rel="stylesheet" href="{% static 'style_table.css' %}">
     <h1> Sources table page</h1>
     <h2><a href="{% url 'get_home' %}">Home</a></h2>
-    <h2><a href="{% url 'get_sources_list' %}">Sources list</a></h2>
+    <h2><a href="{% url 'get_sources_list' %}">Sources list page</a></h2>
 </head>
 <body>
-<h2>Sources</h2>
+<h3>Sources</h3>
 <table class="styled-table">
+    <thead>
     <tr>
-        <th>source.id</th>
+        <th> source.id</th>
         <th>source.name</th>
         <th>source.context</th>
     </tr>
@@ -22,6 +23,7 @@
         <td>{{source.name}}</td>
     </tr>
     {% endfor %}
+    </thead>
 </table>
 </body>
 </html>

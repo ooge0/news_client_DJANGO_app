@@ -29,7 +29,10 @@ def get_sources_table(request):
 
 def get_source(request, pk):
     source = models.Source.objects.get(id=pk)
-    context = {}
-    context['source'] = source
-    return render(request, 'main/source.html', context)
+    data = models.Data.objects.get(id=pk)
+    context_source = {}
+    context_data = {}
+    context_source['source'] = source
+    context_data['data'] = data
+    return render(request, 'main/source.html', context_source)
 

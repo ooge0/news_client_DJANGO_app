@@ -1,20 +1,37 @@
 body {
-  background-color: yellow;
   font-family: verdana;
 }
 
 .styled-table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border: 0.3em solid green;
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.styled-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
+
+.styled-table td {
+    align = center;
+    text-align: center;
+    border: 0.2em solid black;
+    background-color: #ddd3de;
+}
+
+.styled-table tr th {
+    align = center;
+    text-align: center;
+    border: 0.2em solid red;
+    background-color: #7c8a84;
+    color: #42f5ad;
+}
+
+ td {
+    align = center;
+    text-align: center;
+    border: 0.4em solid yellow;
+    background-color: #ddd3de;
 }
 
 
