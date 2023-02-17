@@ -7,12 +7,12 @@
 <a href="{% url 'get_sources_list' %}">Sources</a>
 <a href="{% url 'get_sources_table' %}">Sources table </a>
 <ul>
-    <li>{{source.id}} - {{ source.url }} – {{ source.name }}</li>
+    <li>{{source.id}} - {{ source.url }} – {{ source.name }} – {{ source.country }}</li>
 </ul>
 <br>
 <h3><i> Content of selected '{{source.name}}' source</i></h3>
 <ul>
-    <li> {{source.id}} - {{ data.header }} – {{ data.text }}</li>
+    <li> {{source.id}} - {{ data.title }} – {{ data.text }} – {{ data.country }}</li>
 </ul>
 </body>
 </html>

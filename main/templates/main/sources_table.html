@@ -15,12 +15,20 @@
         <th> source.id</th>
         <th>source.name</th>
         <th>source.context</th>
+        <th>source.country</th>
+        <th>source.total amount of entities</th>
+        <th>source.category</th>
+
     </tr>
     {% for source in sources %}
     <tr>
         <td>{{source.id}}</td>
         <td><a href="{% url 'get_source' pk=source.id %}">{{source.url}}</a></td>
         <td>{{source.name}}</td>
+        <td>{{source.country}}</td>
+        <td>TBD</td>
+        <td>TBD</td>
+
     </tr>
     {% endfor %}
     </thead>
