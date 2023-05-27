@@ -37,7 +37,7 @@ Npw data engine is not working and all data that requests from DB should be past
 # Routes
 
 * **{serverURL}/home** - Home page
-* **{serverURL}/source/{pk}**  -  Sorce page. Specific [age of selected source. It contains list of items that are related to selected source 
+* **{serverURL}/source/{pk}**  -  Sorce page. Specific page of selected source. It contains list of items that are related to selected source 
 * **{serverURL}/sources_list**  - main page of sources. Page that contains all sources (list view)  
 * **{serverURL}/sources_table**  - main page of sources. Page that contains all sources (table view)
 
