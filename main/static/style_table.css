@@ -2,6 +2,13 @@ body {
   font-family: verdana;
 }
 
+#bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
 .styled-table {
     border-collapse: separate;
     border: 0.3em solid green;
@@ -33,5 +40,4 @@ body {
     border: 0.4em solid yellow;
     background-color: #ddd3de;
 }
-
 

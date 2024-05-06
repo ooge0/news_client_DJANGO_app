@@ -1,4 +1,52 @@
-body {
-  background-color: lightblue;
-  font-family: verdana;
-}
+ {
+      border: 2px transparent;
+    }
+
+    header {
+      position: relative;
+      width: 97%;
+      height: 100px;
+      top: 2%;
+      left: 2%;
+      z-index: 1;
+    }
+
+    header h1 {
+    font-size: 12px;
+      text-align: left;
+      padding: 10px;
+    }
+
+    body {
+      margin-top: 3%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td,
+    th {
+      width: 33.33%;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0%;
+      left: 2%;
+      width: 97%;
+      height: 35px;
+      z-index: 0;
+    }
+
+    footer h1 {
+font-size: 12px;
+      text-align: left;
+      padding: 10px;
+    }
+
+
