@@ -1,0 +1,38 @@
+{
+"main_data": [
+	{
+		"id" : 1,
+		"title" : "News -1",
+		"text" : "This is article text",
+		"created_at" : "10 Jan 2000",
+		"source_id" : 1
+	},
+	{
+		"id" : 2,
+		"title" : "News -2",
+		"text" : "This is article text",
+		"created_at" : "10 Jan 2000",
+		"source_id" : 2
+	},
+	{
+		"id" : 3,
+		"title" : "News - 3",
+		"text" : "This is article text",
+		"created_at" : "10 Jan 2000",
+		"source_id" : 3
+	},
+	{
+		"id" : 4,
+		"title" : "News - 4",
+		"text" : "This is article text",
+		"created_at" : "10 Jan 2000",
+		"source_id" : 4
+	},
+	{
+		"id" : 5,
+		"title" : "News - 4",
+		"text" : "This is article text",
+		"created_at" : "10 Jan 2000",
+		"source_id" : 5
+	}
+]}
