@@ -27,7 +27,7 @@ sqlmigrate, which displays the SQL statements for a migration.
    1. migrate DB by command:
       - windows OS: `python manage.py migrate`
       
-   2. Load data from your fixture files by command: ` python manage.py loaddata <yourFixtureFileName>.json
+   2. Load data from your fixture files by command: `python manage.py loaddata <yourFixtureFileName>.json`
    
 
 ### 3. Update DB content
