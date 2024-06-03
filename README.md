@@ -1,4 +1,4 @@
-# news
+# news (Django app)
 
 DJANGO web app for managing parsed articles from different sources.
 
@@ -34,13 +34,14 @@ sqlmigrate, which displays the SQL statements for a migration.
 Add several instances in the Datas and Model tables.
 Now data engine is not working and all data that requests from DB should be pasted manually.  
 
-# Routes
+# App routes
 
 * **{serverURL}/home** - Home page
 * **{serverURL}/source/{pk}**  -  Sorce page. Specific page of selected source. It contains list of items that are related to selected source 
 * **{serverURL}/sources_list**  - main page of sources. Page that contains all sources (list view)  
 * **{serverURL}/sources_table**  - main page of sources. Page that contains all sources (table view)
 
-#TIPS
+# TIPS
 
 - [FIX for "SECURITY WARNING: keep the secret key ](https://dev.to/vladyslavnua/how-to-protect-your-django-secret-and-oauth-keys-53fl)
+-  How to create requirements.txt >> [Python Requirements.txt – How to Create and Pip Install Requirements.txt in Python](https://www.freecodecamp.org/news/python-requirementstxt-explained/[https://www.freecodecamp.org/news/python-requirementstxt-explained/)
