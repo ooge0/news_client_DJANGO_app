@@ -1,0 +1,63 @@
+/* vintage-style.css */
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: grey;
+    color: white;
+    text-align: left;
+    padding: 10px; /* Add padding for header */
+}
+
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px; /* Add padding for footer */
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%; /* Set the desired width */
+    margin: 30px auto; /* Center the table on the page */
+    border: 2px solid #666;
+}
+
+th, td {
+    border: 1px solid #666;
+    padding: 8px;
+    text-align: left;
+    background-color: #123;
+    max-width: 10%; /* Limit the column width to 10% of the table width */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+}
+
+th {
+    background-color: #444;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #333;
+}
+
+tr:hover {
+    background-color: #555;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00cc00;
+}

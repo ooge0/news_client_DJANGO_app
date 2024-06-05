@@ -1,10 +1,14 @@
+<!--home.html-->
+{% extends 'base.html' %}
 {% load static %}
-<html>
-    <body>
-    <h1> {{ mystring }} </h1>
-<link rel="stylesheet" href="{% static 'style_source.css' %}">
- <h2><a href="{% url 'get_sources_list' %}">Sources list page</a></h2>
-    <h2><a href="{% url 'get_sources_table' %}">Sources table page</a></h2>
-        </ul>
-    </body>
-</html>
+
+{% block content %}
+    <table>
+        <tr>
+            <!-- <td><a href="{% url 'get_sources_table' %}">Sources table</a></td> -->
+        </tr>
+        <tr>
+            <!-- <td><a href="{% url 'get_sources_list' %}">Sources list</a></td> -->
+        </tr>
+    </table>
+{% endblock %}

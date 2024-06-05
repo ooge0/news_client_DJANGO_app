@@ -1,0 +1,71 @@
+/* styles.css */
+
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+/* Container for the entire page content */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make the container at least the height of the viewport */
+}
+
+/* Header styles */
+header {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Main content section */
+.content {
+    flex: 1; /* Take remaining height */
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Add borders for a cleaner look */
+}
+
+th {
+    background-color: #f2f2f2;
+}

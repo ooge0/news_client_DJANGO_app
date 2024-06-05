@@ -1,18 +1,56 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'style_source.css' %}">
-<html>
-<title>Source "{{ source.name }}"</title>
+{% extends 'base.html' %}
+
+{% block title %}
+    Source "{{ source.name }}"
+{% endblock %}
+
+{% block extra_head %}
+    <style>
+        /* Source-specific styles go here */
+    </style>
+{% endblock %}
+
+{% block content %}
 <body>
-<h2>Source "{{ source.name }}" page</h2>
-<a href="{% url 'get_sources_list' %}">Sources</a>
-<a href="{% url 'get_sources_table' %}">Sources table </a>
-<ul>
-    <li>{{source.id}} - {{ source.url }} – {{ source.name }} – {{ source.country }}</li>
-</ul>
+<h3>Source "{{ source.name }}" page</h3>
+<table class="styled-table">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>url</th>
+        <th>source_name</th>
+        <th>source_country</th>
+    </tr>
+    <tr>
+        <th>{{source.id}} - {{ source.url }}</th>
+        <th>{{ source.url }}</th>
+        <th>{{ source.name }}</th>
+        <th>{{ source.country }}</th>
+    </tr>
+        </thead>
+</table>
+
 <br>
-<h3><i> Content of selected '{{source.name}}' source</i></h3>
-<ul>
-    <li> {{source.id}} - {{ data.title }} – {{ data.text }} – {{ data.country }}</li>
-</ul>
+<h3><i> Content of '{{source.name}}' source</i></h3>
+<table class="styled-table">
+    <thead>
+    <tr>
+        <th> item.id </th>
+        <th> item.title </th>
+        <th> item.url </th>
+        <th> item.text </th>
+        <th> item.country </th>
+    </tr>
+    {% for data in data_list %}
+    <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td><a href="https://{{data.url}}">{{data.url}}</a></td>
+        <td>{{data.text}}</td>
+        <td>{{source.country}}</td>
+    </tr>
+    {% endfor %}
+  </thead>
+    </table>
 </body>
-</html>
+{% endblock %}

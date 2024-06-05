@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}IK list{% endblock %}
+
+{% block content %}
+<body>
+<div style="max-width: 90%; margin: auto;">
+    <h3>IK list</h3>
+    <div>
+        <label for="recordsPerPage">Records per page:</label>
+        <select id="recordsPerPage" onchange="changeRecordsPerPage(this.value)">
+            <option value="10" {% if paginator.per_page == 10 %}selected{% endif %}>10</option>
+            <option value="20" {% if paginator.per_page == 20 %}selected{% endif %}>20</option>
+            <option value="50" {% if paginator.per_page == 50 %}selected{% endif %}>50</option>
+            <option value="100" {% if paginator.per_page == 100 %}selected{% endif %}>100</option>
+        </select>
+         <!-- Input field for entering an exact page number -->
+        <label for="exactPage">Go to page:</label>
+        <input type="number" id="exactPage" name="exactPage" min="1" max="{{ data_list.paginator.num_pages }}">
+        <button onclick="goToExactPage()">Go</button>
+    </div>
+    <table class="styled-table-very-tight">
+        <thead>
+            <tr>
+                <th>Total pages</th>
+                <th>Total records</th>
+                <th>Unique domains</th>
+            </tr>
+            <tr>
+                <td>
+                    {{data_list.paginator.num_pages}}
+                </td>
+                <td>
+                    {{ paginator.count }}
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+        </thead>
+    </table>
+
+</div>
+ <div class="table-container" style="height: 800px; width: 1000; overflow-y: auto; overflow-x: auto;">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                <th>id</th>
+                <th>item_id</th>
+                <th>date</th>
+                <th>day</th>
+                <th>region_code</th>
+                <th>region_source</th>
+                <th>Domain</th>
+                <th>URL</th>
+                <th>category</th>
+                <th>Item_title_original</th>
+                <th>Item_title_ru</th>
+                <th>Article_title_original</th>
+                <th>filter</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data_list %}
+                <tr>
+                    <td>{{ data.id }}</td>
+                    <td>{{ data.item_id|slice:":10" }}</td>
+                    <td>{{ data.date }}</td>
+                    <td>{{ data.day }}</td>
+                    <td>{{ data.region_code }}</td>
+                    <td>{{ data.region_source }}</td>
+                    <td>{{ data.domain }}</td>
+                    <td><a href="{{ data.url }}">{{ data.url|slice:":11" }}</a></td>
+                    <td>{{ data.category }}</td>
+                    <td>{{ data.item_title_original }}</td>
+                    <td>{{ data.item_title_ru }}</td>
+                    <td>{{ data.article_title_original }}</td>
+                    <td>{{ data.filter }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ </div>
+<div class="pagination">
+        <span class="step-links">
+            {% if data_list.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ data_list.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                <!-- Display the current page number -->
+                Page {{ data_list.number }} of {{ data_list.paginator.num_pages }}.
+            </span>
+
+            {% if data_list.has_next %}
+                <a href="?page={{ data_list.next_page_number }}">next</a>
+                <a href="?page={{ data_list.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+<script src="{% static 'js/main.js' %}"></script>
+<script>
+    function goToExactPage() {
+        var exactPageInput = document.getElementById('exactPage');
+        var exactPage = parseInt(exactPageInput.value);
+
+        // Check if the entered page is within the valid range
+        if (!isNaN(exactPage) && exactPage >= 1 && exactPage <= {{ data_list.paginator.num_pages }}) {
+            window.location.href = "?page=" + exactPage;
+        } else {
+            // Handle invalid input (e.g., show an error message)
+            alert("Invalid page number. Please enter a number between 1 and {{ data_list.paginator.num_pages }}.");
+        }
+    }
+</script>
+{% endblock %}
+</body>
