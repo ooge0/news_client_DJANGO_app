@@ -153,5 +153,3 @@ For custom methods, extra actions, or additional functionalities, you can create
 Create a **utils/** or **helpers/** package within your app to store utility functions.
 Add a **services/** package to encapsulate business logic.
 Use **management/** for custom management commands.
-
-
