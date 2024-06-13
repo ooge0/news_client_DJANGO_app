@@ -3,7 +3,7 @@
 'News'  - Django web app for managing parsed articles from different sources.
 
 ## Required Python packages
-Mandatory Python packages
+Mandatory Python packages for the current project is available in `requirements.txt`
 - Django
 - python-dotenv
 
@@ -11,7 +11,7 @@ Mandatory Python packages
 ## Project setup process
 
 
-#### 1. Activate a new virtual environment:
+### 1. Activate a new virtual environment:
 - **_Create virtual environment._**\
 Script below is creating environment with name 'env'.\
 If you want to create environment with unique name, please replace the env name using your env name in script\
@@ -25,7 +25,7 @@ or \
 and then\
 `source venv_for_news_project/Scripts/activate`
 
-#### 2. Install packages:
+### 2. Install packages:
 
 `pip install --upgrade pip`\
 then\
@@ -34,17 +34,17 @@ If **_requirements.txt_** file is missing request, or you have different configu
 `pip freeze > requirements.txt` \
 and add it into the root folder of the project.
 
-### 2. Install Django
+### Install Django (Optional)
 
-- Django installation (manual installation via **_pip_**)
+If you like to use specific version of Django use manual installation via **_pip_**
 
   * Windows `pip install django`
   * Mac `python -m pip install Django`
 
-#### 2. Migrate DB
+### 3. Migrate DB
  *Migrations* are Django’s way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema. They’re designed to be mostly automatic, but you’ll need to know when to make migrations, when to run them, and the common problems you might run into.
 
-*The Commands*\
+*Djaingo migration commands*\
 There are several commands which you will use to interact with migrations and Django’s handling of database schema:\
 - _**migrate**_, which is responsible for applying and unapplying migrations.
 - **_makemigrations_**, which is responsible for creating new migrations based on the changes you have made to your models.
@@ -57,16 +57,26 @@ sqlmigrate, which displays the SQL statements for a migration.
    2. Load data from your fixture files by command: ` python manage.py loaddata <yourFixtureFileName>.json
    
 
-### 3. Update DB content
+#### 4. Update DB content
 1. Add several instances in the Data and Model tables.
 2. New data engine is not working and all data that requests from DB should be pasted manually  
 
-# Routes
+#### 5. Run app
+Run app by \
+`python managy.py runserver`\
+from the project folder
+
+# App routes
 
 * **{serverURL}/home** - Home page
 * **{serverURL}/source/{pk}**  -  Source page. Specific [age of selected source. It contains list of items that are related to selected source 
 * **{serverURL}/sources_list**  - main page of sources. Page that contains all sources (list view)  
 * **{serverURL}/sources_table**  - main page of sources. Page that contains all sources (table view)
+
+# Tests
+Existing tests are located in tests.py\
+Test execution by\ 
+`  python manage.py test`
 
 # TIPS
 
