@@ -83,3 +83,4 @@ venv.bak/
 .idea
 .idea/
 idea/
+/main/db/
